@@ -16,9 +16,7 @@
 		"@capacitor/core": "latest"
 	},
 	"devDependencies": {
-		"typescript": "^3.2.4",
-		"@capacitor/ios": "latest",
-		"@capacitor/android": "latest"
+		"typescript": "~3.2.2"
 	},
 	"peerDependencies": {
 		"firebase": "^7.0.0"

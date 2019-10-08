@@ -6,7 +6,6 @@ import {
 	LevelEndEvent, LevelStartEvent, LevelUpEvent, PurchaseRefundEvent, SpendVirtualCurrencyEvent
 } from './events';
 
-// ts-ignore
 declare module "@capacitor/core" {
 	interface PluginRegistry {
 		CapacitorFirebaseAnalyticsEvents: CapacitorFirebaseAnalyticsEventsPlugin;
