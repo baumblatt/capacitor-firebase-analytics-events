@@ -1,7 +1,7 @@
 
   Pod::Spec.new do |s|
     s.name = 'CapacitorFirebaseAnalyticsEvents'
-    s.version = '0.0.1'
+    s.version = '0.0.2'
     s.summary = 'Capacitor Firebase Analytics plugin for suggested events.'
     s.license = 'MIT'
     s.homepage = 'https://github.com/baumblatt/capacitor-firebase-analytics-events.git'
