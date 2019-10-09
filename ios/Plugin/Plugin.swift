@@ -86,12 +86,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
     }
 
     @objc func campaignDetails(_ call: CAPPluginCall) {
-        guard let event = call.getString("event") else {
+        guard let event = call.getObject("event") else {
             call.error("The event's parameters are required to log CAMPAIGN_DETAILS")
             return
         }
 
-        let parameters = [String : Any]()
+        var parameters = [String : Any]()
 
         if let source = event["source"] as? String {
             parameters[AnalyticsParameterSource] =  source
@@ -114,11 +114,11 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
         }
 
         if let aclid = event["aclid"] as? String {
-            parameters[AnalyticsParameterAclid] =  aclid
+            parameters[AnalyticsParameterAdNetworkClickID] =  aclid
         }
 
         if let cp1 = event["cp1"] as? String {
-            parameters[AnalyticsParameterCp1] =  cp1
+            parameters[AnalyticsParameterCP1] =  cp1
         }
 
         DispatchQueue.main.async {
@@ -128,12 +128,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
     }
 
     @objc func checkoutProgress(_ call: CAPPluginCall) {
-        guard let event = call.getString("event") else {
+        guard let event = call.getObject("event") else {
             call.error("The event's parameters are required to log CHECKOUT_PROGRESS")
             return
         }
 
-        let parameters = [String : Any]()
+        var parameters = [String : Any]()
 
         if let checkoutStep = event["checkoutStep"] as? Int {
             parameters[AnalyticsParameterCheckoutStep] =  checkoutStep
@@ -150,12 +150,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
     }
 
     @objc func earnVirtualCurrency(_ call: CAPPluginCall) {
-        guard let event = call.getString("event") else {
+        guard let event = call.getObject("event") else {
             call.error("The event's parameters are required to log EARN_VIRTUAL_CURRENCY")
             return
         }
 
-        let parameters = [String : Any]()
+        var parameters = [String : Any]()
 
         if let virtualCurrencyName = event["virtualCurrencyName"] as? String {
             parameters[AnalyticsParameterVirtualCurrencyName] =  virtualCurrencyName
@@ -172,12 +172,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
     }
 
     @objc func spendVirtualCurrency(_ call: CAPPluginCall) {
-        guard let event = call.getString("event") else {
+        guard let event = call.getObject("event") else {
             call.error("The event's parameters are required to log SPEND_VIRTUAL_CURRENCY")
             return
         }
 
-        let parameters = [String : Any]()
+        var parameters = [String : Any]()
 
         if let itemName = event["itemName"] as? String {
             parameters[AnalyticsParameterItemName] =  itemName
@@ -198,12 +198,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
     }
 
     @objc func eCommercePurchase(_ call: CAPPluginCall) {
-        guard let event = call.getString("event") else {
+        guard let event = call.getObject("event") else {
             call.error("The event's parameters are required to log ECOMMERCE_PURCHASE")
             return
         }
 
-        let parameters = [String : Any]()
+        var parameters = [String : Any]()
 
         if let transactionId = event["transactionId"] as? String {
             parameters[AnalyticsParameterTransactionID] =  transactionId
@@ -274,12 +274,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
     }
 
     @objc func levelEnd(_ call: CAPPluginCall) {
-        guard let event = call.getString("event") else {
+        guard let event = call.getObject("event") else {
             call.error("The event's parameters are required to log LEVEL_END")
             return
         }
 
-        let parameters = [String : Any]()
+        var parameters = [String : Any]()
 
         if let levelName = event["levelName"] as? Int {
             parameters[AnalyticsParameterLevelName] =  levelName
@@ -296,12 +296,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
     }
 
     @objc func levelStart(_ call: CAPPluginCall) {
-        guard let event = call.getString("event") else {
+        guard let event = call.getObject("event") else {
             call.error("The event's parameters are required to log LEVEL_START")
             return
         }
 
-        let parameters = [String : Any]()
+        var parameters = [String : Any]()
 
         if let levelName = event["levelName"] as? Int {
             parameters[AnalyticsParameterLevelName] =  levelName
@@ -314,12 +314,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
     }
 
     @objc func levelUp(_ call: CAPPluginCall) {
-        guard let event = call.getString("event") else {
+        guard let event = call.getObject("event") else {
             call.error("The event's parameters are required to log LEVEL_UP")
             return
         }
 
-        let parameters = [String : Any]()
+        var parameters = [String : Any]()
 
         if let levelName = event["levelName"] as? Int {
             parameters[AnalyticsParameterLevelName] =  levelName
@@ -336,12 +336,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
     }
 
     @objc func purchaseRefund(_ call: CAPPluginCall) {
-        guard let event = call.getString("event") else {
+        guard let event = call.getObject("event") else {
             call.error("The event's parameters are required to log PURCHASE_REFUND")
             return
         }
 
-        let parameters = [String : Any]()
+        var parameters = [String : Any]()
 
         if let transactionId = event["transactionId"] as? String {
             parameters[AnalyticsParameterTransactionID] =  transactionId
