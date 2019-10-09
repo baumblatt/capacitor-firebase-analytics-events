@@ -46,16 +46,16 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
         }
 
         //==== Hotels booking params
-        if let numberOfNights = event["numberOfNights"] as? Long {
+        if let numberOfNights = event["numberOfNights"] as? Int {
             parameters[AnalyticsParameterNumberOfNights] =  numberOfNights
         }
 
-        if let numberOfRooms = event["numberOfRooms"] as? Long {
+        if let numberOfRooms = event["numberOfRooms"] as? Int {
             parameters[AnalyticsParameterNumberOfRooms] =  numberOfRooms
         }
 
         //==== Travel params
-        if let numberOfPassengers = event["numberOfPassengers"] as? Long {
+        if let numberOfPassengers = event["numberOfPassengers"] as? Int {
             parameters[AnalyticsParameterNumberOfPassengers] =  numberOfPassengers
         }
 
@@ -135,7 +135,7 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
 
         let parameters = [String : Any]()
 
-        if let checkoutStep = event["checkoutStep"] as? Long {
+        if let checkoutStep = event["checkoutStep"] as? Int {
             parameters[AnalyticsParameterCheckoutStep] =  checkoutStep
         }
 
@@ -234,16 +234,16 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
         }
 
         //==== Hotels booking params
-        if let numberOfNights = event["numberOfNights"] as? Long {
+        if let numberOfNights = event["numberOfNights"] as? Int {
             parameters[AnalyticsParameterNumberOfNights] =  numberOfNights
         }
 
-        if let numberOfRooms = event["numberOfRooms"] as? Long {
+        if let numberOfRooms = event["numberOfRooms"] as? Int {
             parameters[AnalyticsParameterNumberOfRooms] =  numberOfRooms
         }
 
         //==== Travel params
-        if let numberOfPassengers = event["numberOfPassengers"] as? Long {
+        if let numberOfPassengers = event["numberOfPassengers"] as? Int {
             parameters[AnalyticsParameterNumberOfPassengers] =  numberOfPassengers
         }
 
@@ -281,7 +281,7 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
 
         let parameters = [String : Any]()
 
-        if let levelName = event["levelName"] as? Long {
+        if let levelName = event["levelName"] as? Int {
             parameters[AnalyticsParameterLevelName] =  levelName
         }
 
@@ -303,7 +303,7 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
 
         let parameters = [String : Any]()
 
-        if let levelName = event["levelName"] as? Long {
+        if let levelName = event["levelName"] as? Int {
             parameters[AnalyticsParameterLevelName] =  levelName
         }
 
@@ -321,7 +321,7 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
 
         let parameters = [String : Any]()
 
-        if let levelName = event["levelName"] as? Long {
+        if let levelName = event["levelName"] as? Int {
             parameters[AnalyticsParameterLevelName] =  levelName
         }
 
