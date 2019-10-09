@@ -1,6 +1,6 @@
 {
 	"name": "capacitor-firebase-analytics-events",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Capacitor Firebase Analytics plugin for suggested events.",
 	"main": "dist/esm/index.js",
 	"types": "dist/esm/index.d.ts",
