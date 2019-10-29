@@ -361,5 +361,12 @@ public class CapacitorFirebaseAnalyticsEvents: CAPPlugin {
         }
     }
 
+    @objc func setUserId(_ call: CAPPluginCall) {
+        let userId = call.getString("userId") ?? nil
 
+        DispatchQueue.main.async {
+           Analytics.setUserID(userId);
+           call.success();
+        }
+    }
 }

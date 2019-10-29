@@ -15,4 +15,5 @@ CAP_PLUGIN(CapacitorFirebaseAnalyticsEvents, "CapacitorFirebaseAnalyticsEvents",
            CAP_PLUGIN_METHOD(levelStart, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(levelUp, CAPPluginReturnPromise);
            CAP_PLUGIN_METHOD(purchaseRefund, CAPPluginReturnPromise);
+           CAP_PLUGIN_METHOD(setUserId, CAPPluginReturnPromise);
 )

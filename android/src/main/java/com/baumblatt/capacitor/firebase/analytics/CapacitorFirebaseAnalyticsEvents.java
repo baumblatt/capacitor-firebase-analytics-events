@@ -309,6 +309,24 @@ public class CapacitorFirebaseAnalyticsEvents extends Plugin {
         call.success();
     }
 
+    /**
+     * The user ID to ascribe to the user of this app on this device,
+     * which must be non-empty and no more than 256 characters long.
+     * Setting the ID to null removes the user ID.
+     */
+    @PluginMethod()
+    public void setUserId(PluginCall call) {
+        Log.d(PLUGIN_TAG, "Firebase analytics setUserId");
+
+        if (call.getData().has("userId")) {
+            firebaseAnalytics.setUserId(call.getString("userId"));
+        } else {
+            firebaseAnalytics.setUserId(null);
+        }
+
+        call.success();
+    }
+
     private void getString(JSObject value, String name, Bundle bundle, String param) {
         if (value.has(name)) {
             bundle.putString(param, value.getString(name));

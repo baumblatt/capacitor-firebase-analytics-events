@@ -69,4 +69,11 @@ export interface CapacitorFirebaseAnalyticsEventsPlugin {
 	 * E-Commerce Purchase Refund event. This event signifies that an item purchase was refunded.
 	 */
 	purchaseRefund(options: { event: PurchaseRefundEvent }): Promise<void>;
+
+	/**
+	 * The user ID to ascribe to the user of this app on this device,
+	 * which must be non-empty and no more than 256 characters long.
+	 * Setting the ID to null removes the user ID.
+	 */
+	setUserId(options: {userId: string}): Promise<void>;
 }

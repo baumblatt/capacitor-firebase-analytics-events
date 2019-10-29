@@ -130,6 +130,12 @@ export class CapacitorFirebaseAnalyticsEventsWeb extends WebPlugin implements Ca
 
 		return Promise.resolve();
 	}
+
+	async setUserId(options: {userId: string}): Promise<void> {
+		firebase.analytics().setUserId(options.userId);
+
+		return Promise.resolve();
+	}
 }
 
 const CapacitorFirebaseAnalyticsEvents = new CapacitorFirebaseAnalyticsEventsWeb();
